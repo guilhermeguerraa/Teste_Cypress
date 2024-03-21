@@ -4,6 +4,7 @@ module.exports = defineConfig({
    e2e: {
      setupNodeEvents(on, config) {
        // implement node event listeners here
+      
      },
    },
   env: {
@@ -14,5 +15,5 @@ module.exports = defineConfig({
     novasenha: "Senha@123",
     temp_tratat_anda: "80",
     dados_temp_medio: "60"
-  },
+  }
 });

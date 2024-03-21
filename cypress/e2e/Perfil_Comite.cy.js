@@ -28,7 +28,7 @@ it('Mensagem - Altera DPO', () => {
     // Escolhe o Perfil Comite
     cy.get('.mud-list-item-text > .mud-typography')
       .eq(0)
-      .click(); 
+      .click()
 
     // Insere Nome Funcionário
     cy.get(':nth-child(3) > .mud-input-control-input-container > .mud-input > input.mud-input-slot')

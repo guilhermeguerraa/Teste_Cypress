@@ -13,10 +13,6 @@ context('Portal de Denuncia/Login', () => {
   })
 
 it('Mensagem - Altera DPO', () => {
-    // Entrar no Sistema
-    cy.get('.mud-button-label')
-      .click()
-
     // Entra na Tela de Funcionários
     cy.get(':nth-child(4) > .mud-nav-link')
       .click()
@@ -32,7 +28,7 @@ it('Mensagem - Altera DPO', () => {
     // Escolhe o Perfil Comite
     cy.get('.mud-list-item-text > .mud-typography')
       .eq(1)
-      .click(); 
+      .click()
 
     // Insere Nome Funcionário
     cy.get(':nth-child(3) > .mud-input-control-input-container > .mud-input > input.mud-input-slot')

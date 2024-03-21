@@ -1,6 +1,6 @@
 //const cypress = require("cypress");
 
-Cypress.Commands.add('auditor', () => {
+Cypress.Commands.add('login', () => {
 cy.visit('https://denunciae.bindflow.com.br/') 
 cy.get(':nth-child(1) > .mud-input-control-input-container > .mud-input > input.mud-input-slot')
   .click()
@@ -12,7 +12,7 @@ cy.get(':nth-child(2) > .mud-input-control-input-container > .mud-input > input.
   
   // entrar no sistema
   cy.get('.mud-button-label').click()
-});
+})
 
 
 Cypress.Commands.add('adm', () => {
@@ -32,4 +32,6 @@ Cypress.Commands.add('adm', () => {
           
     // entrar no sistema
     cy.get('.mud-button-label').click()
-  });
+    
+  })
+  
