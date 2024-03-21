@@ -35,9 +35,6 @@ context('Administrador', () => {
       // Abre Lista Perfil
       cy.get('.mud-input-control > .mud-input-control-input-container > .mud-input')
         .click({ multiple: true })
-        .get('.mud-list-item-text > .mud-typography')
-        .eq(1)
-        .click() 
      
       // Selecionar Perfil Triagem
    /*   cy.get('.mud-list-item-text > .mud-typography')
