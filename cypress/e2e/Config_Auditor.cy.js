@@ -5,7 +5,7 @@ const pass = Cypress.env('senha')
 
 context('Portal de Denuncia/Login', () => {
   beforeEach(() => {
-    cy.login(user, pass)
+    cy.auditor(user, pass)
   })
 
   it('Auditor/Configuração', ()=>{

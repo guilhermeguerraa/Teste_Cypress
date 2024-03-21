@@ -1,6 +1,6 @@
 //const cypress = require("cypress");
 
-Cypress.Commands.add('login', () => {
+Cypress.Commands.add('auditor', () => {
 cy.visit('https://denunciae.bindflow.com.br/') 
 cy.get(':nth-child(1) > .mud-input-control-input-container > .mud-input > input.mud-input-slot')
   .click()
