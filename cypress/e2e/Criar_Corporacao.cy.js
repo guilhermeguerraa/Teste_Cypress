@@ -16,7 +16,7 @@ const pass = Cypress.env('senha')
 
 context('Administrador', () => {
   beforeEach(() => {
-    cy.login2(admuser, admpass)
+    cy.adm(admuser, admpass)
   })
 
     it('Entra no Sistema como ADM', () => {     

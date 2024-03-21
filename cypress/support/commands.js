@@ -15,7 +15,7 @@ cy.get(':nth-child(2) > .mud-input-control-input-container > .mud-input > input.
 });
 
 
-Cypress.Commands.add('login2', () => {
+Cypress.Commands.add('adm', () => {
   cy.visit('https://denunciae.bindflow.com.br/') 
   // Usuário
   cy.get(':nth-child(1) > .mud-input-control-input-container > .mud-input > input.mud-input-slot')
