@@ -33,25 +33,16 @@ context('Administrador', () => {
         .click()
 
       // Abre Lista Perfil
-     // cy.get('.mud-input-control > .mud-input-control-input-container > .mud-input > .mud-input-adornment > .mud-icon-root > [d="M7 10l5 5 5-5z"]')
-    //  cy.get('.mud-icon-root > [d="M7 10l5 5 5-5z"]')
-      //  .click() 
-
-      cy.get('[d="M7 10l5 5 5-5z"]').then($element => {
-        const element = $element[0];
-        const event = new MouseEvent('click', {
-          bubbles: true,
-          cancelable: true,
-          view: window
-        });
-        element.dispatchEvent(event);
-      });
-
-
-      // Selecionar Perfil Triagem
-      cy.get('.mud-list-item-text > .mud-typography')
+      cy.get('.mud-input-control > .mud-input-control-input-container > .mud-input')
+        .click({ multiple: true })
+        .get('.mud-list-item-text > .mud-typography')
         .eq(1)
         .click() 
-        
+     
+      // Selecionar Perfil Triagem
+   /*   cy.get('.mud-list-item-text > .mud-typography')
+        .eq(1)
+        .click() 
+        */
       }) 
 })
