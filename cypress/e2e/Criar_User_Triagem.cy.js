@@ -33,8 +33,13 @@ context('Administrador', () => {
         .click()
 
       // Abre Lista Perfil
-      cy.get('.mud-input-control > .mud-input-control-input-container > .mud-input')
-        .click({ multiple: true })
+      //cy.get('.mud-input-control > .mud-input-control-input-container').click({ multiple: true })
+      cy.get('[d="M7 10l5 5 5-5z"]')
+      .click()
+
+      // Abre Lista de Perfil
+     // cy.get('[d="M7 10l5 5 5-5z"]')
+     //   .click()
      
       // Selecionar Perfil Triagem
    /*   cy.get('.mud-list-item-text > .mud-typography')
