@@ -35,14 +35,14 @@ context('Administrador', () => {
 
       // Abre Lista Perfil
       cy.get('[d="M7 10l5 5 5-5z"]').then($element => {
-        const element = $element[0];
+        const element = $element[0]
         const event = new MouseEvent('click', {
           bubbles: true,
           cancelable: true,
           view: window
-        });
+        })
         element.dispatchEvent(event);
-      });
+      })
 
       // Selecionar Perfil Adm
       cy.get('.mud-list-item-text > .mud-typography')
