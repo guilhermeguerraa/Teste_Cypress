@@ -34,9 +34,6 @@ context('Administrador', () => {
         .click()
 
       // Abre Lista Perfil
-     //cy.get('.mud-input-control > .mud-input-control-input-container > .mud-input > input.mud-input-slot').click({ force: true })
-      //cy.get('[d="M7 10l5 5 5-5z"]').click()
-     
       cy.get('[d="M7 10l5 5 5-5z"]').then($element => {
         const element = $element[0];
         const event = new MouseEvent('click', {
@@ -47,20 +44,20 @@ context('Administrador', () => {
         element.dispatchEvent(event);
       });
 
-      // Selecionar Perfil Triagem
+      // Selecionar Perfil Adm
       cy.get('.mud-list-item-text > .mud-typography')
-        .eq(1)
+        .eq(0)
         .click({ force: true }) 
       
       // Nome Perfil Triagem
       cy.get(':nth-child(3) > .mud-input-control-input-container > .mud-input > input.mud-input-slot')
         .click()
-        .type('Triagem Cypress')
+        .type('Adm Cypress')
 
       // E-mail Triagem
       cy.get(':nth-child(4) > .mud-input-control-input-container > .mud-input > input.mud-input-slot')
         .click()
-        .type('triagem@cypress.com')
+        .type('adm@cypress.com')
 
       // CPF
       cy.get(':nth-child(5) > .mud-input-control-input-container')
