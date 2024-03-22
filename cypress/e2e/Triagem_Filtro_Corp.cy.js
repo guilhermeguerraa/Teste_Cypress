@@ -14,6 +14,7 @@ const telefone  = gerarTelefone()
 const cpf       = gerarCPF()
 const pass      = Cypress.env('senha')
 const newpass   = Cypress.env('novasenha')
+const corp      = Cypress.env('corporacao')
 
 context('Administrador', () => {
   beforeEach(() => {
@@ -43,7 +44,7 @@ context('Administrador', () => {
 
       // Escolhe uma Corporação
       cy.get('.mud-list-item-text > .mud-typography')
-        .eq(2) // Aqui vc escolhe a Corporação
+        .eq(corp) // Aqui vc escolhe a Corporação
         .click({ force: true })
       }) 
 })

@@ -1,19 +1,21 @@
 /// <reference types="cypress" />
 
 // Importa a função de gerar CNPJ
+const cypress = require('cypress')
 const { gerarCNPJ } = require('../support/Gerador_CNPJ')
 // Importa a função de gerar CPF
 const { gerarCPF } = require('../support/Gerador_CPF')
 // Importa a função de gerar número de Telefone
 const { gerarTelefone } = require('../support/Gerador_Telefone')
 
-const admuser = Cypress.env('adm')
-const admpass = Cypress.env('admsenha')
-const cnpj = gerarCNPJ()
-const telefone = gerarTelefone()
-const cpf = gerarCPF()
-const pass = Cypress.env('senha')
-const newpass = Cypress.env('novasenha')
+const admuser   = Cypress.env('adm')
+const admpass   = Cypress.env('admsenha')
+const cnpj      = gerarCNPJ()
+const telefone  = gerarTelefone()
+const cpf       = gerarCPF()
+const pass      = Cypress.env('senha')
+const newpass   = Cypress.env('novasenha')
+const fila      = cypress.env('fila')
 
 context('Administrador', () => {
   beforeEach(() => {
@@ -42,7 +44,7 @@ context('Administrador', () => {
 
       // Escolhe um filtro de Fila 
       cy.get('.mud-list-item-text > .mud-typography')
-      .eq(0) // Aqui vc escolhe o filtro -> 0 - Aguardando; 1 - Comite; 2 - Executivo; 3 - Outros
+      .eq(fila) // Aqui vc escolhe o filtro -> 0 - Aguardando; 1 - Comite; 2 - Executivo; 3 - Outros
       .click({ force: true })
       }) 
 })

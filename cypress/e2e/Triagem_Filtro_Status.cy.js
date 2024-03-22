@@ -7,13 +7,15 @@ const { gerarCPF } = require('../support/Gerador_CPF')
 // Importa a função de gerar número de Telefone
 const { gerarTelefone } = require('../support/Gerador_Telefone')
 
-const admuser = Cypress.env('adm')
-const admpass = Cypress.env('admsenha')
-const cnpj = gerarCNPJ()
-const telefone = gerarTelefone()
-const cpf = gerarCPF()
-const pass = Cypress.env('senha')
-const newpass = Cypress.env('novasenha')
+const admuser   = Cypress.env('adm')
+const admpass   = Cypress.env('admsenha')
+const cnpj      = gerarCNPJ()
+const telefone  = gerarTelefone()
+const cpf       = gerarCPF()
+const pass      = Cypress.env('senha')
+const newpass   = Cypress.env('novasenha')
+const status    = Cypress.env('status')
+
 
 context('Administrador', () => {
   beforeEach(() => {
@@ -45,7 +47,7 @@ context('Administrador', () => {
 
       // Escolhe um filtro de Fila 
       cy.get('.mud-list-item-text > .mud-typography')
-      .eq(1) // Aqui vc escolhe o filtro -> 0 - Aberto; 1 - Triado; 2 - Andamento; 3 - Apurado; 4 - Concluido
+      .eq(status) // Aqui vc escolhe o filtro -> 0 - Aberto; 1 - Triado; 2 - Andamento; 3 - Apurado; 4 - Concluido
       .click({ force: true })
       }) 
 })

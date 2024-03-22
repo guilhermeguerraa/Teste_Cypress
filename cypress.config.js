@@ -14,6 +14,9 @@ module.exports = defineConfig({
     admsenha: "Senha@123",
     novasenha: "Senha@123",
     temp_tratat_anda: "80",
-    dados_temp_medio: "60"
+    dados_temp_medio: "60",
+    status: "1",
+    fila: "0",
+    corporacao: "2"
   }
 });
