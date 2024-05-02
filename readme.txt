@@ -1,4 +1,4 @@
--- instalar Cypress
+-- Instalar Cypress
 npm install cypress
 
 -- Iniciar Cypress
