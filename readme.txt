@@ -1,7 +1,7 @@
 -- instalar Cypress
 npm install cypress
 
--- executar o projeto
+-- Iniciar Cypress
 npm run cypress open
 
 ---------------------
